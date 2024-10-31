@@ -1,0 +1,69 @@
+<nav class="bg-white">
+
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3 gap-3">
+        <a href="" class="flex  items-center">
+            <p class="text-3xl font-bold text-green-800">Logo</p>
+        </a>
+        <div class="hidden md:block search border border-x-0 border-t-0 border-b-gray-400 py-3">
+            <input type="text" placeholder="Search here..." class="border-none focus:outline-none w-full">
+        </div>
+
+        <div class="hidden md:block">
+            <ul class="list-none flex space-x-5 font-semibold">
+                <li class="text-green-700"><a href="#">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Insurances</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+
+
+        <div class="order-2 md:order-2">
+            <div class="contact flex justify-center items-center space-x-2">
+                <img src="../../../assets/images/phone-call.png" alt="" class="h-4">
+                <p> +(111) 65 458 856</p>
+            </div>
+        </div>
+
+
+
+
+
+        <button class="p-3 bg-green-600 flex justify-center items-center space-x-2 text-white px-9 rounded"> <img
+                src="../../../assets/images/write.png" alt="" class="h-4">
+            <p> Get A Quote</p>
+        </button>
+
+
+
+        <div class="block md:hidden order-last">
+            <button (click)="toggle()">
+                @if(open){
+                <img src="../../../assets/images/close.png" alt="" width="20px">
+                }@else{
+                <img src="../../../assets/images/burger-bar.png" alt="" width="30px">
+                }
+            </button>
+        </div>
+
+
+    </div>
+
+    <div class="p-4 flex flex-col" *ngIf="open">
+        <div class="md:hidden search border border-x-0 border-t-0 border-b-gray-400 py-3">
+            <input type="text" placeholder="Search here..." class="border-none focus:outline-none w-full">
+        </div>
+        <ul class="list-none flex flex-col space-y-5 font-semibold mt-5 items-center w-full">
+            <li class="text-green-700">
+                <a href="#">Home</a>
+            </li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Insurances</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+</nav>
